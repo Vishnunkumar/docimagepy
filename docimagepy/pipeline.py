@@ -33,8 +33,8 @@ class DocImage:
         """
         self.imge = imge
         img_width, img_height = 224, 224    
-        rt_angle = 3
-        while abs(rt_angle) > 2:
+        rt_angle = 10
+        while abs(rt_angle) > 5:
             imgex = cv2.resize(self.imge, (img_width, img_height))
             imgex = imgex.reshape(1, img_height, img_width, 3)
             imgex = imgex/255
